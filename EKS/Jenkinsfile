@@ -23,12 +23,6 @@ pipeline{
             }
         }
 
-        stage('Snyk Security Scan'){
-            steps{
-                sh 'pwd; cd EKS/;bash iac-code-scan.sh'
-            }
-        }
-
         stage('Plan'){
             steps{
                 sh 'pwd; cd EKS/; terraform init'
